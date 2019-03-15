@@ -23,7 +23,14 @@ grid = [ "__C________R___"
        , "________CN_____"
        ]
 
--- variant
+-- variant of outputGrid, for arbitrary Show-able structures
+og :: Show a => [a] -> IO ()
+og = putStrLn . unlines . map show
+
+--check if divisible by 2
+
+div2 x = x `mod` 2 == 0
+
 
 languages = [ "BASIC"
             , "COBOL"
